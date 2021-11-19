@@ -1,0 +1,185 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<style>
+    #bootsrapoverrides {
+        background-color: #420516;
+    }
+
+    .navtext {
+        color: #c51849;
+    }
+
+    #textfont {
+        font-family: 'Estonia', cursive;
+        color: #f5779b;
+        margin-top: 8px;
+        font-size: 30px;
+    }
+
+    a {
+        color: rgb(226, 116, 116);
+    }
+
+    a :hover {
+        color: rgb(214, 14, 14);
+    }
+
+    .table {
+        color: #f1b0c2;
+        background-color: #420516;
+
+    }
+
+    .btn-outline-dark {
+        border-color: #f1b0c2;
+    }
+
+    .btn-outline-dark :hover {
+        border-color: #f1b0c2;
+    }
+
+    .figure {
+        height: 400px;
+        width: 600px;
+    }
+
+    img {
+        width: 300px;
+        height: 268pxpx;
+        margin: 10px;
+    }
+
+    .item1 {
+        grid-area: item1;
+    }
+    .item2 {
+        grid-area: item2;
+    }
+    .item3 {
+        grid-area: item3;
+    }
+    .item4 {
+        grid-area: item4;
+    }
+    .item5 {
+        grid-area: item5;
+    }
+    .item6 {
+        grid-area: item6;
+    }
+    .container {
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 5%;
+    }
+
+    @media screen and (min-width:701px){
+        .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        /* grid-template-rows: 2fr 2fr 2fr; */
+
+        grid-template-areas: 'item1 item1 item2'
+                            'item1 item1 item3'
+                            'item4 item5 item6';
+        grid-auto-rows: 10em;
+        grid-auto-columns: 10em;
+        background-color: #420516;
+        margin:5%;
+        text-align: center;
+        align-items: center;
+        color:#f5779b;
+        }
+        .image1 {
+        width: 100%;
+        height: 100%;
+        /* object-fit: contain; */
+    }
+    .image2 {
+        width:100%;
+        height:100%;
+        object-fit: cover;
+    }
+    }
+    @media screen and (max-width:701px){
+        .grid-container {
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-gap: 10px;
+        padding: 10px;
+        grid-template-areas: 'item1'
+                            'item1'
+                            'item2'
+                            'item3'
+                            'item4'
+                            'item5'
+                            'item6';
+        grid-auto-rows: 10em;
+        grid-auto-columns: 10em;
+        margin:10%;
+        background-color: #420516;
+        color:#f5779b;  
+        text-align: center;
+        align-items: center;
+        }
+    .image1 {
+        width: 90%;
+        height: 90%;
+        /* object-fit: contain; */
+        }
+    .image2 {
+        width:90%;
+        height:90%;
+        object-fit: cover;
+        }
+}
+    .cardtext {
+        background-color:#420516;
+    }
+</style>
+
+{% endblock css %}
+{% block content %}
+
+
+<!-- <div class="container"> -->
+    <div class="grid-container">
+        <div class="item1 image1">
+            <img class="image2" src="{% static 'mainapp/images/map.jpeg' %}" alt="">
+        </div>
+        <div class="item2">
+            <div>
+                <h2>Speed</h2>
+                {{vehicle.speed}}
+            </div>
+        </div>
+        <div class="item3">
+            <div>
+                <h2>Avg. Speed</h2>
+                {{vehicle.avg_speed}}
+            </div>
+        </div>
+        <div class="item4">
+            <div>
+                <h2>Fuel</h2>
+                {{vehicle.fuel}}
+            </div>
+        </div>
+        <div class="item5">
+            <div>
+                <h2>Temprature</h2>
+                {{vehicle.temprature}}
+            </div>
+        </div>
+        <div class="item6">
+            <div>
+                <h2>Engine Status</h2>
+                {{vehicle.engine}}
+            </div>
+        </div>
+    </div>
+<!-- </div> -->
+
+
+{% endblock content %}

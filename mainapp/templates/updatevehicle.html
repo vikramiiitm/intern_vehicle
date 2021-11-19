@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% block css %}
+<style>
+    #bootsrapoverrides {
+        background-color: #420516;
+    }
+    .navtext{
+        color: #e7d1dc;
+    }
+    #textfont {
+        font-family: 'Estonia', cursive;
+        color: #f5779b;
+        margin-top: 8px;
+        font-size: 30px;
+    }
+    a{
+        color:rgb(226, 116, 116);
+    }
+    a :hover{
+        color:rgb(214, 14, 14);
+    }
+    .table {
+        color:#f1b0c2;
+        background-color: #420516;
+        
+    }
+    .btn-outline-dark {
+        border-color:#f1b0c2;
+    }
+
+    .btn-outline-dark :hover {
+        border-color:#f1b0c2;
+    }
+    .btn-primary{
+        background-color:#420516;
+        border: 2px solid pink;
+    }
+    
+</style>
+  
+{% endblock css %}
+{% block content %}
+<div class="container navtext">
+    <br>
+    <h2>Add Vehicle</h2>
+<form action="{% url 'createvehicle' %}" method="POST">{% csrf_token %}
+    <div class="form-group">
+        <label">{{form.vehicle_name.label}}</label>
+        {% render_field form.vehicle_name class="form-control" %}   
+    </div>
+    <div class="form-group">
+        <label">{{form.speed.label}}</label>
+        {% render_field form.speed class="form-control"%}   
+    </div>
+    <div class="form-group">
+        <label">{{form.avg_speed.label}}</label>
+        {% render_field form.avg_speed class="form-control"%}   
+    </div>
+    <div class="form-group">
+        <label">{{form.fuel.label}}</label>
+        {% render_field form.fuel class="form-control"%}   
+    </div>
+    <div class="form-group">
+        <label">{{form.engine.label}}</label>
+        {% render_field form.engine class="form-control"%}   
+    </div>
+    <div class="form-group">
+        <label">{{form.temprature.label}}</label>
+        {% render_field form.temprature class="form-control"%}   
+    </div>
+    <button type="submi" class="btn btn-primary">Save</button>
+</form>
+</div>
+
+{% endblock content %}
