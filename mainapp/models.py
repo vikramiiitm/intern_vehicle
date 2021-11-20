@@ -20,5 +20,5 @@ class Navigation(models.Model):
     avg_speed = models.IntegerField(blank=True,null=True)
     temprature = models.IntegerField(blank=True,null=True)
     fuel = models.CharField(_('Fuel'),max_length=255,choices=Fuel.choices, default=Fuel.FULL)
-    engine = models.CharField(_('Engine'),max_length=255,choices=Fuel.choices, default=Engine.GOOD)
+    engine = models.CharField(_('Engine'),max_length=255,choices=Engine.choices, default=Engine.GOOD)
 

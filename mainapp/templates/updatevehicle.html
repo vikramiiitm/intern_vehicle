@@ -58,16 +58,16 @@
         {% render_field form.avg_speed class="form-control"%}   
     </div>
     <div class="form-group">
+        <label">{{form.temprature.label}}</label>
+        {% render_field form.temprature class="form-control"%}   
+    </div>
+    <div class="form-group">
         <label">{{form.fuel.label}}</label>
         {% render_field form.fuel class="form-control"%}   
     </div>
     <div class="form-group">
         <label">{{form.engine.label}}</label>
         {% render_field form.engine class="form-control"%}   
-    </div>
-    <div class="form-group">
-        <label">{{form.temprature.label}}</label>
-        {% render_field form.temprature class="form-control"%}   
     </div>
     <button type="submi" class="btn btn-primary">Save</button>
 </form>
