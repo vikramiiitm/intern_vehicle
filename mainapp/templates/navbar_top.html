@@ -2,9 +2,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?familEstoniay=&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Estonia&display=swap" rel="stylesheet"> 
 <style>
     #bootsrapoverrides {
-        background-color: #420516;
+        background-color: rgb(0, 0, 0);
         padding: 0;
         padding-left: 20px;
     }
@@ -12,30 +15,35 @@
         color: #f0ced7;
         font-size: 30px;
     }
-    #textfont {
-        font-family: 'Estonia', cursive;
-        color: #f0ced7;
-        margin-top: 8px;
-    }
+
     a:hover{
             color:white;
         }
+    .header-style {
+      /* font-family: 'Abril Fatface', cursive; */
+      color: rgba(243, 74, 7, 0.7);
+      font-family: 'Estonia', cursive;
+      font-size: 100px;
+    }
+    .header-style a :hover {
+      color: rgba(233, 139, 102, 0.7);
+    }
 </style>
 
 <nav id="bootsrapoverrides" class="navbar navbar-expand-sm">
     <!-- Brand/logo -->
     <a class="navbar-brand" href="#">
-      <img src="{% static 'mainapp/images/navlogo.png' %}" alt="logo" style="width:40px;">
+      <img class="navbar-brand" src="{% static 'mainapp/images/navlogo.png' %}" alt="logo" style="width:40px;">
     </a>
     
     <!-- Links -->
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a id="navtext" class="nav-link" href="{% url 'navigation' %}">Vehicles</a>
+        <a class="header-style" href="{% url 'navigation' %}">Vehicles</a>
       </li>
     </ul>
-    <span id="textfont" class="ml-auto right navbar-brand">
-        <h1>Navigation</h1>
+    <span id="" class="ml-auto right navbar-brand">
+        <h1 class="header-style">Navigation</h1>
     </span>
   </nav>
 

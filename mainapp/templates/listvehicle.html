@@ -5,25 +5,22 @@
         background-color: #420516;
     }
     .navtext{
-        color: #4d0531;
+        color: rgba(243, 74, 7, 0.7);;
     }
-    #textfont {
-        font-family: 'Estonia', cursive;
-        color: #f5779b;
-        margin-top: 8px;
-        font-size: 30px;
-    }
+
     a{
-        color:rgb(226, 116, 116);
+        color: rgba(240, 158, 125, 0.7);;
     }
-    a :hover{
-        color:rgb(214, 14, 14);
-    }
+
     .table {
-        color:#f1b0c2;
-        background-color: #420516;
-        
+        color:#eed9df;
+        background-color: rgb(255, 131, 3,0.2);
     }
+
+    .table a:hover{
+        color:rgb(255, 131, 3);
+    }
+
     .btn-outline-dark {
         border-color:#f1b0c2;
     }
@@ -35,6 +32,10 @@
         align-items:center;
         justify-content:center
     }
+    .textfont {
+        color: rgba(243, 74, 7, 0.7);
+    }
+
 </style>
   
 {% endblock css %}
@@ -54,7 +55,7 @@
             <div>
                 <th scope="row counter"><p>{{forloop.counter}}</p></th>
                 <td>
-                    <a class="font-weight-bold" href="{% url 'detailvehicle' pk=vehc.pk %}">{{vehc.vehicle_name}}</a>
+                    <a class="font-weight-bold " href="{% url 'detailvehicle' pk=vehc.pk %}">{{vehc.vehicle_name}}</a>
                     <br>
                     <a href="{% url 'update_vehicle' pk=vehc.pk %}">Update</a>
                 </td>    

@@ -43,7 +43,7 @@
 {% block content %}
 <div class="container navtext">
     <br>
-    <h2>Add Vehicle</h2>
+    <h2>Update</h2>
 <form action="{% url 'createvehicle' %}" method="POST">{% csrf_token %}
     <div class="form-group">
         <label">{{form.vehicle_name.label}}</label>
